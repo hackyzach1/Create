@@ -5,7 +5,7 @@ def rubiksCrossDialog(favoriteColor):
     #       print("I'm not sure what you mean. Please enter one of the colors listed in order to proceed.  ")
     #       favoriteColor = input("What is your favorite color on the cube? Input 'white', 'blue', 'yellow', 'orange', 'red', or 'green' to move onto the next step. ")
 
-    topEdges = input("Good choice! Now that you've chosen " + favoriteColor + ", keep the center piece of " + favoriteColor + " facing towards you. This will be the first of three layers that you will solve. Say 'done' to move onto the next step, or       'help' to learn more.  ")
+    topEdges = input(" Now that you've chosen " + favoriteColor + ", keep the center piece of " + favoriteColor + " facing towards you. This will be the first of three layers that you will solve. Say 'done' to move onto the next step, or 'help' to learn more.  ")
     if favoriteColor == "help":
         print("Check out the sergs B on youtube for some detailed, helpful instructions. ")
     
