@@ -1,7 +1,7 @@
 from rubiksCrossDialog import *
 from rubiksCornersDialog import *
 from rubiksSecondLayerDialog import *
-# from rubiksThirdLayerDialog import *
+from rubiksThirdLayerDialog import *
 
 
 def printWhatToDo():
@@ -39,7 +39,7 @@ def selection(favoriteColor):
         elif step.lower() == "middle layer":
                     rubiksSecondLayerDialog(favoriteColor)
         elif step.lower() == "bottom layer":
-                    rubiksThirdLayerDialog()
+                    rubiksThirdLayerDialog(favoriteColor)
         else:
                     print("Please enter 'Cross', 'Corners', 'Middle Layer', or 'Bottom Layer'")
         print()
@@ -51,7 +51,7 @@ def selection(favoriteColor):
 from rubiksCrossDialog import *
 from rubiksCornersDialog import *
 from rubiksSecondLayerDialog import *
-# # from rubiksThirdLayerDialog import *
+from rubiksThirdLayerDialog import *
 
 def printWhatToDo():
     favoriteColor = input("What is your favorite color on the cube? Input 'white', 'blue', 'yellow', 'orange', 'red', or 'green' to move onto the next step: ").lower()
@@ -60,9 +60,7 @@ def printWhatToDo():
         favoriteColor = input("What is your favorite color on the cube? Input 'white', 'blue', 'yellow', 'orange', 'red', or 'green' to move onto the next step: ").lower()
     return favoriteColor
 
-print("**************************************************************************************************************")
-print("Rubik's Cube helper")
-print()
+
 
 favoriteColor = printWhatToDo()
 selection(favoriteColor)
@@ -86,7 +84,7 @@ while True:
     elif step == "middle layer":
         rubiksSecondLayerDialog(favoriteColor)
     elif step == "bottom layer":
-        rubiksThirdLayerDialog()
+        rubiksThirdLayerDialog(favoriteColor)
     else:
         print("Please enter 'Cross', 'Corners', 'Middle Layer', or 'Bottom Layer'")
     print()
