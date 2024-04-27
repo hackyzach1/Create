@@ -3,10 +3,10 @@ def rubiksCornersDialog(favoriteColor):
     orientation = input(str("Look for a " + favoriteColor + " corner piece on the bottom layer and align it under the spot where it's supposed to go. Hint: look at center pieces. A Corner always goes in between each center. Say 'done' to move onto the next step, or 'help' to learn more.  "))
     if orientation == "help":
         print("Check out the sergs B on youtube for some detailed, helpful instructions. ")
-        miniAlgorithm = input("Once you've completed the previous step, make sure the side  of the color you chose for the cross is facing toward your right. Input 'done' to move onto the next step or 'help' for additional assistance.")
+        miniAlgorithm = input("Once you've completed the previous     step, make sure the side  of the color you chose for the cross is facing toward your right. Input 'done' to move onto the next step or 'help' for additional assistance.")
 
     elif orientation == "done":
-         miniAlgorithm = input("Once you've completed the previous step, make sure the side  of the color you chose for the cross is facing toward your right. Input 'done' to move onto the next step or 'help' for additional assistance.")
+         miniAlgorithm = input("Once you've completed the previous     step, make sure the side  of the color you chose for the cross is facing toward your right. Input 'done' to move onto the next step or 'help' for additional assistance.")
     while orientation not in ["done", "help"]:
         print("I'm not sure what you mean. Please enter 'done' or 'help' to move forward.")
         orientation = input(str("Look for a " + favoriteColor + " corner piece on the bottom layer and align it under the spot where it's supposed to go. Hint: look at center pieces. A Corner always goes in between each center. Say 'done' to move onto the next step, or 'help' to learn more.  "))
