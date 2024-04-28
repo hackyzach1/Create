@@ -1,10 +1,10 @@
+import textwrap
+
 def rubiksThirdLayerDialog(favoriteColor):
-
-
+    
     favoriteColorList = ["red", "blue", "yellow", "white", "green", "orange" ]
+
     opposingColorDict = dict()
-
-
     opposingColorDict["red"] = "orange"
     opposingColorDict["orange"] = "red"
     opposingColorDict["green"] = "blue"
@@ -13,23 +13,14 @@ def rubiksThirdLayerDialog(favoriteColor):
     opposingColorDict["yellow"] = "white"
     oppositeFavoriteColor = []
 
-
     for color in favoriteColorList:
         if color in opposingColorDict:
             oppositeFavoriteColor.append(opposingColorDict[color])
     oppositeFavoriteColor[0] = str(oppositeFavoriteColor[0])
 
-
-   
-
-
-    # if favoriteColor in favoriteColorList:
-    #     if favoriteColor == 'red':
-    #         oppositeFavoriteColor.append(favoriteColor)
-    # white  works!
     if favoriteColor == "white":
         rotate = input("Since you solved the first layer using " + favoriteColor + ", now you're gonna want to keep " + str(oppositeFavoriteColor[3]) +" on the top for this last step. Enter 'done' to proceed onward. ")
-    # blue works!
+   
     if favoriteColor == "blue":
         rotate = input("Since you solved the first layer using " + favoriteColor + ", now you're gonna want to keep " + str(oppositeFavoriteColor[1]) +" on the top for this last step. Enter 'done' to proceed onward.")
    
@@ -75,12 +66,12 @@ def rubiksThirdLayerDialog(favoriteColor):
 
 
 
-    # if statements for arcCross
+    # if statements for arcCross lines 75 through 173
    
     if arcCross == "1":
-        one = input("If you have the lowercase 'r' shape on the bottom layer, rotate the cube so that the lowercase 'r' is the new top layer and keep the r on the upside. Now that you have the 'r' upwards with the base of the r pointing toward you, rotate the face closest to you clockwise (NOT THE BOTTOM LAYER, BUT THE LAYER WITH THE BOTTOM TIP OF THE 'r'). After you have the 'r' facing upwards and the base of the 'r' facing you, rotate the layer facing you clockwise (again, not the side that you're making the cross on), move the right side up, top layer left, right side down, top layer back to the right, and the side facing you back to where it was (should be counter clockwise). enter '2' to move onto the following step.    ")
+        one = input(textwrap.fill("If you have the lowercase 'r' shape on the bottom layer, rotate the cube so that the lowercase 'r' is the new top layer and keep the r on the upside. Now that you have the 'r' upwards with the base of the r pointing toward you, rotate the face closest to you clockwise (NOT THE BOTTOM LAYER, BUT THE LAYER WITH THE BOTTOM TIP OF THE 'r'). After you have the 'r' facing upwards and the base of the 'r' facing you, rotate the layer facing you clockwise (again, not the side that you're making the cross on), move the right side up, top layer left, right side down, top layer back to the right, and the side facing you back to where it was (should be counter clockwise). enter '2' to move onto the following step.    ", width=160))
         if one == "2":
-            two = input("If you have the line shape on the bottom layer, rotate the cube so that the line becomes horizontal and is the new top layer. Now that you have the horizontal line facing up with the face that is two-thirds-filled facing you, rotate the face closest to you clockwise (NOT THE BOTTOM LAYER WITH THE HORIZONTAL LINE PATTERN, BUT THE LAYER THAT HAS TWO LAYERS FILLED). After you rotated it clockwise, move the right side up, top layer left, right side down, top layer back to the right, and the side facing you back to where it was (should be counter clockwise). enter 'done' to move onto the following step.  ")
+            two = input(textwrap.fill("If you have the line shape on the bottom layer, rotate the cube so that the line becomes horizontal and is the new top layer. Now that you have the horizontal line facing up with the face that is two-thirds-filled facing you, rotate the face closest to you clockwise (NOT THE BOTTOM LAYER WITH THE HORIZONTAL LINE PATTERN, BUT THE LAYER THAT HAS TWO LAYERS FILLED). After you rotated it clockwise, move the right side up, top layer left, right side down, top layer back to the right, and the side facing you back to where it was (should be counter clockwise). enter 'done' to move onto the following step.  ", width=160))
             if two == "done":
                 arcAlignment = input("The next step is to align each edge piece on the cross with its center piece. Align as many edges on the bottom layer as you can. The most that you can possible do is two. If all of them are already aligned, skip to the next step. To do align the edges we will use an algorithm similar to what we did in the previous step. This algorithm will rearrange the edges. Enter 'done' to move on to the algorithm. ")
                 if arcAlignment == "done":
@@ -174,3 +165,4 @@ def rubiksThirdLayerDialog(favoriteColor):
     else:
         print("I'm not sure what you mean. Please enter 1 to proceed to the next step. ")
         one = input("If you have the lowercase 'r' shape on the bottom layer, rotate the cube so that the lowercase 'r' is the new top layer and keep the r on the upside. Now that you have the 'r' upwards with the base of the r pointing toward you, rotate the face closest to you clockwise (NOT THE BOTTOM LAYER, BUT THE LAYER WITH THE BOTTOM TIP OF THE 'r'). After you have the 'r' facing upwards and the base of the 'r' facing you, rotate the layer facing you clockwise (again, not the side that you're making the cross on), move the right side up, top layer left, right side down, top layer back to the right, and the side facing you back to where it was (should be counter clockwise). enter '2' to move onto the following step.    ")
+        # dictionary and loop that changes the original favorite color to the opposite side of the cube and adds it to a list
